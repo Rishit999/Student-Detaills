@@ -1,24 +1,21 @@
-# student_grade.py
+marks = []
 
-# Marks for 5 subjects (predefined, since user input is not allowed)
-marks = [85, 78, 92, 67, 74]  # you can change these values
+for i in range(5):
+    mark = float(input(f"Enter marks for subject {i+1}: "))
+    marks.append(mark)
+average = sum(marks) / 5
+print(f"Average Marks: {average}")
 
-# Calculate average
-average = sum(marks) / len(marks)
-
-# Determine grade
-if average >= 85:
+if average >= 90:
+    grade = 'A+'
+elif average >= 80:
     grade = 'A'
 elif average >= 70:
     grade = 'B'
-elif average >= 55:
+elif average >= 60:
     grade = 'C'
-elif average >= 40:
+elif average >= 50:
     grade = 'D'
 else:
-    grade = 'Fail'
-
-# Print the results
-print(f"Marks: {marks}")
-print(f"Average Marks: {average:.2f}")
+    grade = 'F'
 print(f"Grade: {grade}")
