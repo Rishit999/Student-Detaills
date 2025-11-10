@@ -1,11 +1,7 @@
 
-marks1 = float (input("Enter the marks for subject 1:"))
-marks2 = float (input("Enter the marks for subject 2:"))
-marks3 = float (input("Enter the marks for subject 3:"))
-marks4 = float (input("Enter the marks for subject 4:"))
-marks5 = float (input("Enter the marks for subject 5:"))
+marks= [85, 78, 92, 67, 74]  
 
-average = sum(marks1+marks2+marks3+marks4+marks5) / 5
+average = sum(marks) / len(marks)
 
 if average >= 85:
     grade = 'A'
@@ -18,6 +14,7 @@ elif average >= 40:
 else:
     grade = 'Fail'
 
-
+# Print the results
+print(f"Marks: {marks}")
 print(f"Average Marks: {average:.2f}")
 print(f"Grade: {grade}")
